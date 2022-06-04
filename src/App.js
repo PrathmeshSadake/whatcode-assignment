@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Container } from 'react-bootstrap';
+import About from './component/About';
+import CorporateResponsibility from './component/CorporateResponsibility';
+import CustomNavbar from './component/CustomNavbar';
+import Description from './component/Description';
+import FoundersMessage from './component/FoundersMessage';
+import GroupCompanies from './component/GroupCompanies';
+import HeroGrid from './component/HeroGrid';
+import Mission from './component/Mission';
+import Vision from './component/Vision';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <CustomNavbar />
+      <About />
+      <HeroGrid />
+      <div
+        style={{ backgroundColor: '#1f1f1f', height: '10rem', width: '100%' }}
+      />
+      <Description />
+      <Vision />
+      <Mission />
+      <CorporateResponsibility />
+      <FoundersMessage />
+      <GroupCompanies />
     </div>
   );
-}
+};
 
 export default App;
